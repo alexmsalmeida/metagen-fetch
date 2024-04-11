@@ -1,4 +1,4 @@
-# MetaGen-Fetch - Download and QC metagenomic reads from ENA
+# MetaGen-Fetch - Download and QC public metagenomes
 
 This is a Snakemake workflow for downloading and quality-controlling metagenomic read files (FASTQ) from ENA. It uses [fastq-dl](https://github.com/rpetit3/fastq-dl) to first download a set of paired-end reads from ENA, and subsequently QCs the data using the [metagen-fastqc](https://github.com/alexmsalmeida/Metagen-FastQC) script.
 
