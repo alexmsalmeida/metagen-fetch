@@ -34,7 +34,7 @@ rule ena_download:
         fwd = "{output}/{study}/{sample}/{sample}_1.fastq.gz",
         rev = "{output}/{study}/{sample}/{sample}_2.fastq.gz"
     params:
-        outdir = "{output}/{sample}"
+        outdir = "{output}/{study}/{sample}"
     conda:
         "config/envs/ena_download.yml"
     resources:
