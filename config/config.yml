@@ -6,4 +6,4 @@ output_dir: "/rds/project/rds-aFEMMKDjWlo/rfs_data/metagenomes/fastqs" # Output 
 
 host_ref: "/rds/project/rds-aFEMMKDjWlo/rfs_data/databases/bwa/hg38.fa" # FASTA file of host genome for decontamination
 
-ncores: 4 # Number of CPUS to use
+ncores: 4 # Number of CPUs to use

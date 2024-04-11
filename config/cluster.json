@@ -6,6 +6,6 @@
   "queue": "icelake-himem",
   "project": "ALMEIDA-SL3-CPU",
   "time": "12:00:00",
-  "outfile": "{wildcards.output}/{wildcards.sample}/logs/{rule}.log"
+  "outfile": "{wildcards.output}/{wildcards.study}/{wildcards.sample}/logs/{rule}.log"
  }
 }

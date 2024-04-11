@@ -41,7 +41,7 @@ rule ena_download:
         ncores = cpus
     shell:
         """
-        fastq-dl --cpus {resources.ncores} -a {input} --provider ena --only-provider --outdir {params.outdir}
+        fastq-dl --cpus {resources.ncores} -a {wildcards.sample} --provider ena --only-provider --outdir {params.outdir}
         """
 
 rule metagen_qc:
@@ -62,5 +62,5 @@ rule metagen_qc:
         """
         ./scripts/metagen-fastqc.sh -t {resources.ncores} -c {params.bwa_ref} -f {input.fwd} -r {input.rev}
         mv {params.fwd} {input.fwd}; mv {params.rev} {input.rev}
-        touch done.txt
+        touch {output}
         """
