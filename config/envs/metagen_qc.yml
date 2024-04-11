@@ -1,0 +1,10 @@
+name: metagen_qc
+channels:
+  - bioconda
+  - conda-forge
+dependencies:
+  - trim-galore=0.6.10=hdfd78af_0
+  - bwa=0.7.17=he4a0461_11
+  - samtools=1.9=h10a08f8_12
+  - bedtools=2.31.0=hf5e1c6e_2
+  - pigz=2.6=h27826a3_0

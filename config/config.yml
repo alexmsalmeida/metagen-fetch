@@ -1,0 +1,9 @@
+# Parameters for snakemake run
+
+input_file: "/rds/project/rds-aFEMMKDjWlo/rfs_data/metagenomes/fastqs/test.tsv" # Input TSV file with list of run accessions in first column and study accessions in 2nd column
+
+output_dir: "/rds/project/rds-aFEMMKDjWlo/rfs_data/metagenomes/fastqs" # Output directory to store cleaned FASTQs
+
+host_ref: "/rds/project/rds-aFEMMKDjWlo/rfs_data/databases/bwa/hg38.fa" # FASTA file of host genome for decontamination
+
+ncores: 4 # Number of CPUS to use
