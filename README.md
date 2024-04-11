@@ -4,7 +4,7 @@ This is a Snakemake workflow for downloading and quality-controlling metagenomic
 
 ## Installation
 
-1. Install [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) and [snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html)
+1. Install [conda](https://conda.io/projects/conda/en/latest/user-guide/install/index.html) and [snakemake](https://snakemake.readthedocs.io/en/stable/getting_started/installation.html) (tested v7.32.3)
 
 2. Prepare and index a FASTA file of your host genome for decontamination. You can follow the instructions provided in the metagen-fastqc script [here](https://github.com/alexmsalmeida/Metagen-FastQC).
 
