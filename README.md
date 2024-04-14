@@ -19,15 +19,10 @@ git clone https://github.com/alexmsalmeida/metagen-fetch.git
     - `input_file`: TSV file (no header) with run accessions listed as the first column and corresponding study accessions as the second column.
     - `output_dir`: Output directory to store cleaned files.
     - `host_ref`: Location of the indexed FASTA file for host decontamination.
-    - `ncores`: Number of cores to use for the analyses.
 
-2. (option 1) Run the pipeline locally (adjust `-j` based on the number of available cores)
+2. Run the pipeline on a cluster (e.g., SLURM)
 ```
-snakemake --use-conda -k -j 4
-```
-2. (option 2) Run the pipeline on a cluster (e.g., SLURM)
-```
-snakemake --use-conda -k -j 100 --profile config/slurm --latency-wait 120
+snakemake --use-conda -k -j 25 --profile config/slurm --latency-wait 60
 ```
 
 3. Cleaned files will be stored in the specified output directory followed by `[study]/[run]`.

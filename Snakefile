@@ -1,7 +1,10 @@
 import os
 
 configfile: 'config/config.yml'
-cpus = config['ncores']
+configfile: 'config/cluster.json'
+
+cpus_ena = config['ena_download']['cores']
+cpus_qc = config['metagen_qc']['cores']
 host_ref = config['host_ref']
 
 INPUT_FILE = config['input_file']
@@ -38,10 +41,10 @@ rule ena_download:
     conda:
         "config/envs/ena_download.yml"
     resources:
-        ncores = cpus
+        ncores = cpus_ena
     shell:
         """
-        fastq-dl --cpus {resources.ncores} -a {wildcards.sample} --provider ena --only-provider --outdir {params.outdir}
+        fastq-dl --cpus {resources.ncores} -a {wildcards.sample} --outdir {params.outdir}
         """
 
 rule metagen_qc:
@@ -57,7 +60,7 @@ rule metagen_qc:
     conda:
         "config/envs/metagen_qc.yml"
     resources:
-        ncores = cpus
+        ncores = cpus_qc
     shell:
         """
         ./scripts/metagen-fastqc.sh -t {resources.ncores} -c {params.bwa_ref} -f {input.fwd} -r {input.rev}
