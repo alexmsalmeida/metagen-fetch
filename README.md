@@ -22,7 +22,7 @@ git clone https://github.com/alexmsalmeida/metagen-fetch.git
 
 2. Run the pipeline on a cluster (e.g., SLURM)
 ```
-snakemake --use-conda -k -j 25 --profile config/slurm --latency-wait 60
+snakemake --use-conda -k -j 25 --profile config/slurm
 ```
 
 3. Cleaned files will be stored in the specified output directory followed by `[study]/[run]`.

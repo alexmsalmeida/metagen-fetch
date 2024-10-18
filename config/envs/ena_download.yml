@@ -3,4 +3,5 @@ channels:
   - conda-forge
   - bioconda
 dependencies:
+  - python=3.10
   - fastq-dl=2.0.4=pyhdfd78af_0

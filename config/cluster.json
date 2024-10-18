@@ -1,9 +1,9 @@
 {
  "__default__": {
   "jobname": "{rule}.{wildcards}",
-  "queue": "icelake-himem",
-  "project": "ALMEIDA-SL3-CPU",
-  "time": "12:00:00",
+  "queue": "icelake",
+  "project": "ALMEIDA-SL2-CPU",
+  "time": "36:00:00",
   "outfile": "{wildcards.output}/{wildcards.study}/{wildcards.sample}/logs/{rule}.log"
  },
  "ena_download": {
@@ -11,7 +11,7 @@
   "mem": 10000
  },
  "metagen_qc": {
-  "cores": 8,
-  "mem": 40000
+  "cores": 4,
+  "mem": 20000
  }
 }
